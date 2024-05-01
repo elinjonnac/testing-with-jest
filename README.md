@@ -1,2 +1,2 @@
 # testing-with-jest
-A Jets + npm lab session
+A Jest + npm lab session

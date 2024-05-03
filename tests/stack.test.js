@@ -26,8 +26,8 @@ test('pop elements in a specific order', () => {
     stack.push(1);
     stack.push(2);
     stack.push(3);
-    //Medvetet fel i testkod
-    expect(stack.pop()).toBe(1);
-    expect(stack.pop()).toBe(2);
+    //Rättat fel i testkod
     expect(stack.pop()).toBe(3);
+    expect(stack.pop()).toBe(2);
+    expect(stack.pop()).toBe(1);
 });

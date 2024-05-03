@@ -66,3 +66,22 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.accept();
 	});
 });
+
+//Medvetet fel i testkoden
+test('Popping from an empty stack', async () => {
+    //Pop-operationen körs efter klick på pop-knappen
+    let popButton = await driver.findElement(By.id('pop'));
+    await popButton.click();
+
+    let alert = await driver.switchTo().alert();
+
+    //Hämta texten i alert
+    let alertText = await alert.getText();
+
+    //Låt alert försvinna
+    await alert.accept();
+
+    //Kontrollera så att texten i alert är detsamma som texten
+    //vid körning av pop på en tom stack
+    expect(alertText).toEqual("Tog bort undefined");
+});
